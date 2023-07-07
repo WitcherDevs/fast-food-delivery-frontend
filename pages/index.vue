@@ -1,3 +1,37 @@
+<script setup lang="ts">
+import gsap from 'gsap';
+const customerNum = ref(0);
+const averageScore = ref(0);
+const reviewerNum = ref(0);
+const statistics = ref(null);
+const isStatView = useElementVisibility(statistics)
+
+
+const tweened = reactive({
+  customerNum: 0,
+  averageScore: 0,
+  reviewerNum: 0
+})
+
+watch(customerNum, (n) => {
+  gsap.to(tweened, { duration: 2.5, customerNum: Number(n) || 0 })
+})
+watch(averageScore, (n) => {
+  gsap.to(tweened, { duration: 2.5, averageScore: Number(n) || 0 })
+})
+watch(reviewerNum, (n) => {
+  gsap.to(tweened, { duration: 2.5, reviewerNum: Number(n) || 0 })
+})
+
+watch(isStatView, (b) => {
+  if (b) {
+    customerNum.value = 1081;
+    averageScore.value = 4;
+    reviewerNum.value = 758;
+  }
+})
+</script>
+
 <template>
   <section>
     <div>
@@ -35,15 +69,23 @@
         </div>
       </div>
     </div>
-    <div class="bg-[#292f33] mt-20 h-[20rem] mb-16 grid grid-cols-3 text-center items-center">
-      <div>
-        h1
+    <div class="bg-[#292f33] mt-20 h-[16rem] mb-16 grid grid-cols-3 text-center items-center trigger" ref="statistics">
+      <div class="flex flex-col items-center gap-2">
+        <Icon size="65" name="streamline:interface-user-single-close-geometric-human-person-single-up-user" />
+        <h4 class="text-5xl font-bold">{{ tweened.customerNum.toFixed(0) }}</h4>
+        <h3 class="text-base">Customers</h3>
       </div>
-      <div>
-        h2
+      <div class="flex flex-col items-center gap-2">
+        <Icon size="65" name="ic:sharp-star" />
+        <h4 class="text-5xl font-bold">{{ tweened.averageScore.toFixed(0) }}</h4>
+        <h3 class="text-base">Average
+          Score</h3>
       </div>
-      <div>
-        h3
+      <div class="flex flex-col items-center gap-2">
+        <Icon size="65"
+          name="streamline:interface-help-customer-support-1-customer-headset-help-microphone-phone-support" />
+        <h4 class="text-5xl font-bold">{{ tweened.reviewerNum.toFixed(0) }}</h4>
+        <h3 class="text-base">Reviewers</h3>
       </div>
     </div>
   </section>
