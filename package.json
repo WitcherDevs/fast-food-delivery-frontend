@@ -11,12 +11,14 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@types/node": "^18",
+    "@vueuse/nuxt": "^10.2.1",
     "autoprefixer": "^10.4.14",
     "nuxt": "^3.6.1",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2"
   },
   "dependencies": {
+    "gsap": "^3.12.2",
     "nuxt-icon": "^0.4.2"
   }
 }
