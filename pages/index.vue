@@ -72,12 +72,12 @@ watch(isStatView, (b) => {
     <div class="bg-[#292f33] mt-20 h-[16rem] mb-16 grid grid-cols-3 text-center items-center trigger" ref="statistics">
       <div class="flex flex-col items-center gap-2">
         <Icon size="65" name="streamline:interface-user-single-close-geometric-human-person-single-up-user" />
-        <h4 class="text-5xl font-bold">{{ tweened.customerNum.toFixed(0) }}</h4>
+        <h4 class="text-5xl font-bold ">{{ tweened.customerNum.toFixed(0) }}</h4>
         <h3 class="text-base">Customers</h3>
       </div>
       <div class="flex flex-col items-center gap-2">
         <Icon size="65" name="ic:sharp-star" />
-        <h4 class="text-5xl font-bold">{{ tweened.averageScore.toFixed(0) }}</h4>
+        <h4 class="text-5xl font-bold ">{{ tweened.averageScore.toFixed(0) }}</h4>
         <h3 class="text-base">Average
           Score</h3>
       </div>
