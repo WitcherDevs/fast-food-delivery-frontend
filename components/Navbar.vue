@@ -12,9 +12,6 @@
       <NuxtLink to="/menu" exact-active-class="text-[#cd7a1c]">
         Menu
       </NuxtLink>
-      <NuxtLink to="/reviews" exact-active-class="text-[#cd7a1c]">
-        Reviews
-      </NuxtLink>
     </div>
     <div class="flex items-center gap-5 text-lg uppercase cursor-pointer">
       <Icon name="ph:basket-bold" size="32" title="Comming Soon" />
