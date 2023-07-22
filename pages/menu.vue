@@ -12,7 +12,7 @@ onMounted(() => {
 
 <template>
   <section>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center text-start px-20 mt-16 mb-16 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center text-start px-20 mt-16 mb-16 gap-6">
       <div class="bg-[#292f33] flex rounded-lg h-[11rem] shadow-lg" v-for="item in newFoods">
         <img class="w-1/3" src="/burger_menu.png" alt="menu">
         <div class="flex flex-col gap-2">
@@ -23,7 +23,7 @@ onMounted(() => {
           <h2 class="mr-3 h-[4.2rem] max-w-max">{{ item.description }}</h2>
           <div class="text-end">
             <button class="mr-3">
-              <Icon name="material-symbols:shopping-cart-outline-sharp" size="25" />
+              <Icon name="material-symbols:shopping-cart-outline-sharp" size="25" class="hover:text-[#c3751d]" />
             </button>
           </div>
         </div>
